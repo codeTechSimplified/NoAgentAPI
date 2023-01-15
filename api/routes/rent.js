@@ -101,7 +101,7 @@ console.log(rent);
 router.post("/", checkAuth, upload.array('productImage'), (req, res, next) => {
   let pImage = [];
   req.files.forEach(file=>{
-    pImage.push(`http://localhost:8000/${file.path}`);
+    pImage.push(`https://noagent5.onrender.com/${file.path}`);
   })
   const rent = new Rent({
     user_id:req.body.user_id,
